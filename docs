@@ -1,0 +1,37 @@
+create components
+    -addtask
+    -button
+    -header
+    -tasks
+    -task
+
+install react dev tools
+
+
+//install react router 
+npm install react-router-dom
+
+useState
+useEffect
+
+*run server
+npm run build //create static assets
+
+install 
+npm i -g server
+
+
+serve -s build -p 8000
+result: http://192.168.1.6:8000
+
+*install json-server
+npm i json-server
+
+
+
+
+install json server
+
+npx json-server --watch data/db.json --port 3000
+
+ 

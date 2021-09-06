@@ -1,38 +1,131 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  user-select: none;
+  -ms-user-select: none;
+  box-sizing: border-box;
+}
+header{
+  padding: 5px 0;
+  color: rgba(255,234,91,.5);
+  background-color: rgba(0,0,0,1);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  padding: 0;
+  margin: 0;
+}
+div.tasks{ 
+  width: 80%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-list > ul{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.nav-list > ul > li > a{
+  color: white;
+  text-decoration: none; 
+  font-weight: 700;
+}
+
+.nav-list > ul > li > a:hover{
+  color: rgba(255,234,91,.5);
+ 
+}
+
+ul > li{
+  list-style: none;
+  padding: 3px 20px;
+  background-color: rgba(0,0,0,.05);
+  margin: 2px 0;
+  position: relative;
+}
+
+ul > li:first-child{
+  margin-bottom: 2px !important;
+}
+ul > li:last-child{
+   margin-top: 2px !important;
+}
+
+.remove-task{
+  cursor: pointer;
+  color: red; 
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+
+button{
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-sm{
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+.btn-success{
+  background-color: rgb(46, 187, 107);
   color: white;
 }
+.btn-danger { 
+  background-color: rgb(255, 50, 50);
+  color: white; 
+}
+.left{
+  position: relative;
+  right: 0;
+}
+.flex-row-reverse{
 
-.App-link {
-  color: #61dafb;
+  flex-direction: row-reverse;
+}
+.flex{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-form{
+   padding: 20px 0px;
 }
+
+.form-control{ 
+
+}
+.form-control > input:not([type=checkbox]) {
+  width: 100%;
+  padding:10px 5px; 
+}
+ 
+.form-control input{  
+    margin: 8px 0;
+    box-sizing: border-box;
+} 
+.f-w{
+  width: 100%; 
+} 
+.bg-black{
+  background-color: rgba(0,0,0,1);
+}
+.white{
+  color: white;
+}
+.p-10{
+  padding: 10px 0px;
+}
+.reminder{ 
+  border-left: 2px solid green;
+}
+
+

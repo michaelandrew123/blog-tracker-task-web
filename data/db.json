@@ -1,0 +1,23 @@
+{ 
+    "blogData": [
+        {
+            "id": 1,
+            "title": "My new website",
+            "body": "This is body of my new website",
+            "author": "Michael"
+        },
+        {
+            "id": 2,
+            "title": "Welcome party",
+            "body": "Welcome to the party, we will make sure that all visitors will enjoy until the end of the show.",
+            "author": "Andrew"
+        },
+        {
+            "id": 3,
+            "title": "Web dev top tips",
+            "body": "This is top web dev tips",
+            "author": "Suarez"
+        }
+
+    ]
+}

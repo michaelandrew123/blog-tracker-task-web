@@ -3,10 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+ 
+
 
 ReactDOM.render(
   <React.StrictMode>
+
     <App />
+    {/* <Router>
+      <Switch> 
+        <Route exact path="/"> 
+          <App />
+        </Route> 
+        <Route path="/about"> 
+            About
+        </Route> 
+        <Route path="/contact"> 
+            Contact 
+        </Route>
+      </Switch> 
+    </Router> */}
+
   </React.StrictMode>,
   document.getElementById('root')
 );
