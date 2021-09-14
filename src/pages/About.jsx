@@ -1,7 +1,21 @@
-const About = ()=>{ 
+import useFetch from "../customHook/useFetch";
+
+const About = ()=>{  
+    const {data: abouts, isPending, error} = useFetch('http://localhost:8000/aboutUs'); 
+
+
     return ( 
-        <>
-            <h3>This is About Page</h3>
+        <>   
+            {abouts &&  
+                <>
+                    {abouts.map(about=>(
+                        <div className="about-us" key={about.id}> 
+                            <h3>{about.title}</h3>  
+                            <p>{about.body}</p>
+                        </div> 
+                    ))}
+                </> 
+            }
         </> 
     )
 }

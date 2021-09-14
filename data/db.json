@@ -1,23 +1,33 @@
-{ 
-    "blogData": [
-        {
-            "id": 1,
-            "title": "My new website",
-            "body": "This is body of my new website",
-            "author": "Michael"
-        },
-        {
-            "id": 2,
-            "title": "Welcome party",
-            "body": "Welcome to the party, we will make sure that all visitors will enjoy until the end of the show.",
-            "author": "Andrew"
-        },
-        {
-            "id": 3,
-            "title": "Web dev top tips",
-            "body": "This is top web dev tips",
-            "author": "Suarez"
-        }
-
-    ]
+{
+  "blogData": [
+    {
+      "title": "Welcome party.",
+      "body": "Welcome to the party, we will make sure that all visitors will enjoy until the end of the show",
+      "author": "michael",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Web dev top tips",
+      "body": "This is top web dev tips",
+      "author": "suarez"
+    }
+  ],
+  "aboutUs": [
+    {
+      "id": 1,
+      "title": "About Us",
+      "body": "Igrev is the best partner in Korea that can provide excellent value to customers in the field of website construction - system construction - system operation - providing online/mobile shopping mall solutions in website construction based on technical know-how from many years of experience, starting with professional web site production. I am proud of myself."
+    },
+    {
+      "id": 2,
+      "title": "technology",
+      "body": "From IT consulting to FullStack development (Web, Application, Back Office), planning (project management, branding, E-commerce), new technology R&D development (artificial intelligence, block chain), cross-platform application development, technology consulting, UX & UI design, We are expanding our presence in various fields such as SEO."
+    },
+    {
+      "id": 3,
+      "title": "future vision",
+      "body": "With the beginning of the 4th industry, programming is fundamental and is used in so many places that there is no missing place. We create a better world to live in by solving industrial and social problems using technology, and dream of a human-centered knowledge innovation future through a system that can know what everyone doesn't know . We will always listen to the voice of our customers and fulfill our role as a company that will lead society through the development of new technologies that will take responsibility for the future."
+    }
+  ]
 }

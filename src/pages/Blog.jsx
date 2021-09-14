@@ -1,49 +1,69 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom"
 import BlogList from '../components/Blog/BlogList';
+import Create from '../components/Create';
+import useFetch from '../customHook/useFetch';
 
 const Blog = ()=>{
 
-
-    const { id } = useParams();
-
-    const [ blogs, setBlogs ] = useState()
-
-    const [name, setName] = useState('Michael');
-
+    const {data: blogs, isPending, error} = useFetch('http://localhost:8000/blogData'); 
+    const [name, setName] = useState('Michael'); 
+    const [showAdd, setShowAdd] = useState(false);
+    
         const handleName = ()=>{ 
-            setName('Andrew'); 
-        }
 
+            if(name === 'Michael'){ 
+                setName('Andrew'); 
+            }else{ 
+                setName('Michael'); 
+            }
+        } 
         // const handleBlogTitle = ()=>{ 
         //      blogs.filter(blog=> blog.author === 'Suarez')
         // }
 
-        const handleBlogDelete = (id)=>{ 
-            console.log("Delete item" + id)
-            const newBlogs = blogs.filter(blog=> blog.id !== id);
-            setBlogs(newBlogs);
-        }
+        // const handleBlogDelete = (id)=>{  
+        //     const newBlogs = blogs.filter(blog=> blog.id !== id);
+        //     setBlogs(newBlogs);
+        // }
 
-
-        useEffect(()=>{
-            fetch('http://localhost:3000/blogData')
-                .then(res => {
-                    return res.json();
-                })
-                .then(data=>{
-                    console.log(data)
-                })
-        }, [])
+        
  
+
+    // useEffect(()=>{
+    //     console.log(length)
+    // }, [])
     return (
         <> 
             {/* <h3>This is blog page! - { id }</h3> */} 
+         
+            
+            <button className="btn-sm " onClick={() => setShowAdd(!showAdd)} >{showAdd ? 'Close' : 'Add'}</button>
+            { showAdd &&  <Create />  }
+            
             <h2>{name}</h2>
-
             <button className="btn-sm" onClick={handleName}>Change name</button>
-            <BlogList blogs={blogs} title="Random Blog" onDelete={handleBlogDelete}/>
-            <BlogList blogs={blogs.filter(blog=> blog.author === 'Suarez') } title="Suarez's Blog" onDelete={handleBlogDelete}/>
+
+            {error && <div>{error}</div>}
+            {isPending && <div>Loading...</div>}
+
+            { blogs 
+            &&  
+            <>
+                <BlogList blogs={blogs} title="Random Blog"  />  
+                {
+                    blogs.filter(blog=> blog.author === 'Suarez').length > 0 ? (
+                    <BlogList blogs={blogs.filter(blog=> blog.author === 'Suarez') } title="Suarez's Blog"  />
+                    ) : ''
+                }  
+            </> 
+            }
+            
+
+          {/*  
+            onDelete={handleBlogDelete}
+          <BlogList blogs={blogs.filter(blog=> blog.author === 'Suarez') } title="Suarez's Blog" onDelete={handleBlogDelete}/>
+         */}
         </>     
     )
 }

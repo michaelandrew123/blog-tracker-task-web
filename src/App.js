@@ -5,8 +5,29 @@ import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
 import About from './pages/About';
 import Blog from './pages/Blog';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import BlogDetails from './components/Blog/BlogDetails';
+import Redux from './pages/Redux';
+import Image from './pages/Image';
+import Todo from './pages/Todo';
+import Modefied from './components/Blog/Modefied';
 
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import NotFound from './pageNotFound/NotFound';
+import AllMeetups from './components/Todo/pages/AllMeetups';
+import NewMeetup from './components/Todo/pages/NewMeetup';
+import Favorites from './components/Todo/pages/Favorites';
+
+
+
+
+
+// const cors = require('cors');
+// const corsOptions ={
+//     origin:'http://localhost:80/reactImageUpload.php', 
+//     credentials:true,            //access-control-allow-credentials:true
+//     optionSuccessStatus:200
+// }
+// App.use<any>(cors(corsOptions));
 
 
 function App() {
@@ -58,37 +79,62 @@ function App() {
     setTasks([...tasks, newTask])
   }
 
-  return (
- 
-    <Router>
-    <div className="container">
-       
-            <Header title='Total Tasks' totalTasks={tasks.filter(c=> c.id > 0).length}/>  
-       
-            <Switch> 
-                <Route exact path="/"> 
-                  <Home 
-                  onAdd={addTask} 
-                  tasks={tasks}
-                  onDelete={deleteTask} 
-                  onToggle={toggleReminder}
-                  />   
-                </Route> 
-                <Route path="/about"> 
-                  <About /> 
-                </Route> 
-                <Route path="/blog/:id"> 
-                  <Blog /> 
-                </Route>
-                <Route path="/contact"> 
-                  <ContactUs /> 
-                </Route>
-            </Switch>
-    
-    </div>
 
-    </Router>
-  
+  return (
+    <> 
+      <Router>
+        <div className="container"> 
+              <Header title='Igrev' totalTasks={tasks.filter(c=> c.id > 0).length}/>   
+              <Switch>  
+                  <Route exact path="/"> 
+                    <Home 
+                    onAdd={addTask} 
+                    tasks={tasks}
+                    onDelete={deleteTask} 
+                    onToggle={toggleReminder}
+                    />   
+                  </Route> 
+                  <Route path="/about"> 
+                    <About /> 
+                  </Route> 
+                  <Route path="/blog"> 
+                    <Blog /> 
+                  </Route>
+                  <Route path="/blogs/:id"> 
+                    <BlogDetails /> 
+                  </Route>
+                  <Route path="/contact"> 
+                    <ContactUs /> 
+                  </Route> 
+                  <Route path="/redux"> 
+                    <Redux /> 
+                  </Route> 
+                  <Route path="/image"> 
+                    <Image /> 
+                  </Route> 
+                  <Route path="/modefied/:id"> 
+                    <Modefied /> 
+                  </Route> 
+                  <Route path="/todo"> 
+                    <Todo /> 
+                  </Route> 
+                  <Route path="/allmeetup"> 
+                    <AllMeetups />
+                  </Route> 
+                  <Route path="/new-meetup"> 
+                    <NewMeetup />
+                  </Route> 
+                  <Route path="/favorites"> 
+                    <Favorites />
+                  </Route> 
+                  <Route path="*"> 
+                    <NotFound /> 
+                  </Route>
+              </Switch> 
+        </div> 
+      </Router>
+ 
+    </>
 
 
   );

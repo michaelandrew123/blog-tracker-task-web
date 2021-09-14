@@ -14,7 +14,8 @@ header{
 }
 .container{
   padding: 0;
-  margin: 0;
+  margin: auto;
+  width: 80%;
 }
 div.tasks{ 
   width: 80%;
@@ -38,21 +39,24 @@ div.tasks{
  
 }
 
-ul > li{
+.nav-list > ul > li{
   list-style: none;
   padding: 3px 20px;
   background-color: rgba(0,0,0,.05);
   margin: 2px 0;
   position: relative;
+  width: 100%;
 }
 
-ul > li:first-child{
+.nav-list > ul > li:first-child{
   margin-bottom: 2px !important;
 }
-ul > li:last-child{
+.nav-list > ul > li:last-child{
    margin-top: 2px !important;
 }
-
+li > a{
+  text-decoration: none;
+}
 .remove-task{
   cursor: pointer;
   color: red; 
@@ -64,32 +68,39 @@ ul > li:last-child{
 
 
 button{
-  padding: 0;
-  margin: 0;
+  padding:5px 10px;
+  margin: 2px;
   outline: 0;
   border: none;
   cursor: pointer;
 }
 
+
+
 .btn-sm{
   padding: 10px 20px;
-  margin: 10px 0;
+  margin: 10px 2px;
+  cursor: pointer;
 }
-
+.btn-shadow{
+  border-radius:2px;
+  box-shadow:1px 1px 2px #f1356d;
+}
 .btn-success{
   background-color: rgb(46, 187, 107);
   color: white;
+  cursor: pointer;
 }
 .btn-danger { 
   background-color: rgb(255, 50, 50);
   color: white; 
+  cursor: pointer;
 }
 .left{
   position: relative;
   right: 0;
 }
-.flex-row-reverse{
-
+.flex-row-reverse{ 
   flex-direction: row-reverse;
 }
 .flex{
@@ -99,7 +110,10 @@ button{
 .add-form{
    padding: 20px 0px;
 }
-
+.form-group{  
+  display: flex;
+  flex-direction: column;
+}
 .form-control{ 
 
 }
@@ -112,6 +126,12 @@ button{
     margin: 8px 0;
     box-sizing: border-box;
 } 
+textarea, select{
+  padding:10px 5px; 
+  font-size: 15px;
+  margin: 8px 0;
+}
+ 
 .f-w{
   width: 100%; 
 } 
@@ -122,10 +142,72 @@ button{
   color: white;
 }
 .p-10{
-  padding: 10px 0px;
+  padding: 10px;
+}
+.mx-10{
+  margin: 10px 0px;
 }
 .reminder{ 
   border-left: 2px solid green;
 }
 
+
+
+.blog-details h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.blog-details div{
+  margin: 20px 0;
+}
+
+
+.not-found{  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+a{
+  text-decoration: none;
+}
+
+.todo-navlist{ 
+}
+
+.todo-navlist > ul {
+  position: absolute; 
+  width: 100%;
+  left: 0;
+  text-align: center; 
+} 
+.todo-navlists > li{
+  list-style: none;
+  color: white !important;
+  background-color: black;
+  padding: 5px 10px;
+  border-bottom: 1px solid #333;
+}
+.todo-navlists > li a{ 
+  color: white !important; 
+}
+.todo-navlists > li a:hover{ 
+  color: rgba(255,234,91,.5); 
+}
+.todo-navlists > li a:active{ 
+  color: white; 
+} 
+
+.badge{
+  background-color: #cc2062;
+  color: white;
+  border-radius: 12px;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+}
+/* .todo-navlists > li{ 
+  display: block;
+}  */
 
