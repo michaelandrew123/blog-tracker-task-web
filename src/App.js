@@ -16,6 +16,7 @@ import NotFound from './pageNotFound/NotFound';
 import AllMeetups from './components/Todo/pages/AllMeetups';
 import NewMeetup from './components/Todo/pages/NewMeetup';
 import Favorites from './components/Todo/pages/Favorites';
+import CakeShop from './pages/CakeShop';
 
 
 
@@ -126,6 +127,9 @@ function App() {
                   </Route> 
                   <Route path="/favorites"> 
                     <Favorites />
+                  </Route> 
+                  <Route path="/CakeShop"> 
+                    <CakeShop />
                   </Route> 
                   <Route path="*"> 
                     <NotFound /> 

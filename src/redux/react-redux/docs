@@ -1,0 +1,5 @@
+//install middleware
+
+npm install redux-logger
+
+npm install axios redux-thunk

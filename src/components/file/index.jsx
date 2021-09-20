@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 //For Image Save
-import axios from 'axios'
+//import axios from 'axios'
 
 //For Image Upload
 import ImageUploading from "react-images-uploading";

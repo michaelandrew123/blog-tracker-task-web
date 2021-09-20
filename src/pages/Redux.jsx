@@ -1,6 +1,7 @@
 import {useSelector, useDispatch} from 'react-redux'; 
+import { Link } from 'react-router-dom';
 import { increment, decrement } from '../redux/actions';
-
+ 
 
 const Redux = () =>{
     
@@ -11,6 +12,9 @@ const Redux = () =>{
   const dispatch = useDispatch();
     return (
         <>
+            <Link to="/CakeShop" >Open Cake Shop</Link>
+            <br />
+            <br />
             <h3>In-Progress</h3>
             <div>Counter : {counter} </div> 
 
@@ -18,6 +22,7 @@ const Redux = () =>{
 
             <button onClick={()=>dispatch(increment(2))}>+</button>
             <button onClick={()=>dispatch(decrement())}>-</button>
+ 
         </>
     )
 }
