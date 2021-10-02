@@ -54,3 +54,44 @@ inprogress
 
 ***AJAX***
 npm install jquery --save
+
+//logger middleware
+
+npm i redux-logger
+
+//redux devtools
+
+npm install --save redux-devtools-extension
+
+
+//async
+state,
+actions,
+reducer
+
+state {
+    loading: true,
+    data: [],
+    error: ''
+}
+
+**Actions**
+FETCH_USERS_REQUEST
+FETCH_USERS_SUCCESS
+FETCH_USERS_FAILURE
+
+**Reducer**
+case: FETCH_USERS_REQUEST
+    loading: true
+case: FETCH_USERS_SUCCESS
+    loading: false
+    users: data(from API)
+case: FETCH_USERS_FAILURE
+    loading: false
+    error: error (from API)
+
+
+
+
+//redux thunk  get request
+npm install axios redux-thunk

@@ -11,8 +11,11 @@ const Redux = () =>{
   const isLogged = useSelector(state => state.isLogged)
   const dispatch = useDispatch();
     return (
-        <>
-            <Link to="/CakeShop" >Open Cake Shop</Link>
+        <>  
+            <div>
+                <Link to="/cakeShop" >Cake Shop</Link> <br />
+                <Link to="/account" >Account</Link> 
+            </div>
             <br />
             <br />
             <h3>In-Progress</h3>

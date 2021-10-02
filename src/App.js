@@ -17,6 +17,7 @@ import AllMeetups from './components/Todo/pages/AllMeetups';
 import NewMeetup from './components/Todo/pages/NewMeetup';
 import Favorites from './components/Todo/pages/Favorites';
 import CakeShop from './pages/CakeShop';
+import Accounts from './pages/Acounts';
 
 
 
@@ -128,8 +129,11 @@ function App() {
                   <Route path="/favorites"> 
                     <Favorites />
                   </Route> 
-                  <Route path="/CakeShop"> 
+                  <Route path="/cakeShop"> 
                     <CakeShop />
+                  </Route> 
+                  <Route path="/account"> 
+                    <Accounts />
                   </Route> 
                   <Route path="*"> 
                     <NotFound /> 
